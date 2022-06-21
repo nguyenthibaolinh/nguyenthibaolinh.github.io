@@ -174,7 +174,6 @@ ul.submenu>li>a:hover {
 .row .item img {
 	height: 17em;
 }
-
 /* ----------------------------------------------------- */
 
 /* bars mobile */
@@ -241,9 +240,6 @@ ul.submenu>li>a:hover {
     position: relative;
     display: block;
 }
-.timkiem-mobile{
-
-}
 .timkiem-bar-mobile .timkiem-mobile input {
     height: 3em;
     width: 16em;
@@ -275,6 +271,46 @@ ul.submenu>li>a:hover {
 }
 .nav-input:checked ~ .menu-mobile{
     transform: translateX(0%);
+}
+/* ------------ */
+@media (min-width: 1113px) {
+    .tooltip {
+        position: relative;
+        display: block;
+    }
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #cdbdee;
+    color: black;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 110%;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+    transition: all .5s ease-out;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #cdbdee transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
 }
 /* -----------tablet and mobile----------- */
 /* @media (min-width: 46.25em) and (max-width: 63.9375em) { */
